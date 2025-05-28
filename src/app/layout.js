@@ -1,4 +1,4 @@
-// src/app/layout.js (server component)
+
 
 import './globals.css';
 import { Geist, Geist_Mono } from "next/font/google";

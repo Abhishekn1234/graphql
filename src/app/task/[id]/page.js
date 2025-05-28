@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { useQuery, useMutation, gql } from "@apollo/client";
 
-// Query to fetch the task by ID
 const GET_TASK_BY_ID = gql`
   query GetTask($id: ID!) {
     getTask(id: $id) {
@@ -45,7 +44,7 @@ const UPDATE_TASK = gql`
 export default function EditTask() {
   const router = useRouter();
 
-  // ✅ Fix: Unwrap the params properly in Next.js 14+
+  
  const params = useParams();
 const id = params?.id;
 

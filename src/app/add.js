@@ -1,4 +1,4 @@
-// pages/add.js
+
 "use client";
 import { useState } from 'react';
 import { useMutation } from '@apollo/client';

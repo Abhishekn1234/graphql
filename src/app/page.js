@@ -48,7 +48,7 @@ export default function Home() {
   if (loadingAll) return <p>Loading tasks...</p>;
   if (errorAll) return <p>Error loading tasks: {errorAll.message}</p>;
 
-  // Choose data source based on filterStatus
+
   const tasks =
     filterStatus === 'All'
       ? dataAll?.getTasks || []

@@ -47,7 +47,7 @@ export default function EditTask({ params }) {
   const { loading, error, data } = useQuery(GET_TASK, { variables: { id } });
   const [updateTask] = useMutation(UPDATE_TASK);
 
-  // Form state initialized empty, will fill when data loads
+  
   const [form, setForm] = useState({
     title: "",
     description: "",
@@ -55,7 +55,7 @@ export default function EditTask({ params }) {
     status: "Todo",
   });
 
-  // When data loads, populate form
+  
   useEffect(() => {
     if (data?.task) {
       setForm({
@@ -83,7 +83,7 @@ export default function EditTask({ params }) {
           ...form,
         },
       });
-      router.push("/"); // Redirect after successful update
+      router.push("/"); 
     } catch (err) {
       console.error("Update error:", err);
       alert("Failed to update task");
